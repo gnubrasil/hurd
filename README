@@ -1,3 +1,56 @@
+Este é o GNU Hurd, <http://www.gnu.org/software/hurd/>. Bem-vinda.
+
+GNU Hurd é executado em máquinas x86 de 32 bits. Uma versão em execução em x86 de 64 bits
+(x86_64) máquinas em andamento. Voluntários interessados ​​em portos para
+outras arquiteturas são buscadas; entre em contato conosco (veja abaixo) se você
+gostaria de ajudar.
+
+Para compilar o Hurd, você precisa de um conjunto de ferramentas configurado para direcionar i? 86-gnu;
+você não pode usar um conjunto de ferramentas voltado para GNU / Linux. Observe também que você
+não pode executar o Hurd "isoladamente": você precisará adicionar outros componentes
+como a GNU C Library (glibc), para transformá-lo em um sistema executável.
+
+São necessárias versões recentes do Mach, MIG, glibc e GCC. Opcionalmente, um Sun
+A implementação de RPC é necessária para construir o tradutor NFS e daemon:
+
+glibc Configurado com --enable-obsolete-rpc.
+TI-RPC falha atualmente em construir em GNU, veja
+        <http://lists.debian.org/debian-hurd/2010/12/msg00007.html>.
+
+Obviamente, você também precisa de versões um pouco recentes de binutils, make,
+bash e algumas outras ferramentas. Nenhum requisito rígido é conhecido atualmente
+para estes, no entanto.
+
+Para obter instruções sobre como compilar e instalar o GNU Hurd de um
+já executando o sistema Hurd, consulte o arquivo ʻINSTALL '.
+
+É possível construir o Hurd; o arquivo INSTALL-cross
+contém algumas instruções anteriores para fazer isso, mas é muito
+problemas para manter essas instruções e mantê-los atualizados. Seu
+a melhor aposta é começar já com um sistema Hurd em execução. Se você fizer
+decidir fazer a compilação cruzada, você precisará examinar as instruções em
+INSTALE para construir Mach, libc e Hurd juntos e siga
+eles. As instruções em INSTALL-cross estão bastante desatualizadas, mas
+eles contêm algumas dicas úteis enterradas entre os erros, por isso temos
+deixou o arquivo para quem o achar útil.
+
+Observe que este diretório também contém uma boa quantidade de
+código que ainda não está funcionando. Por padrão, os makefiles constroem apenas o
+código de trabalho.
+
+
+O GNU Hurd é um software livre. Tudo isso, incluindo as bibliotecas em
+esta distribuição, é coberta pela GNU General Public License, encontrada
+no arquivo COPYING.
+
+
+Leia o FAQ em <http://www.gnu.org/software/hurd/faq.html>.
+Relatórios de bugs devem ser enviados para <bug-hurd@gnu.org> ou arquivados em
+<http://savannah.gnu.org/bugs/?group=hurd>. Pedidos de assistência
+deve ser enviado para <help-hurd@gnu.org> ou arquivado em
+<http://savannah.gnu.org/support/?group=hurd>. Você também pode nos encontrar no
+a rede Freenode IRC no canal #hurd.
+
 This is the GNU Hurd, <http://www.gnu.org/software/hurd/>.  Welcome.
 
 GNU Hurd runs on 32-bit x86 machines.  A version running on 64-bit x86
