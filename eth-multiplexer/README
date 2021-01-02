@@ -1,3 +1,33 @@
+[Introdução]
+
+eth-multiplexer é um multiplexador de rede. Ele cria uma interface ethernet virtual e despacha o pacote para o programa de usuário correto que abre sua interface virtual. Ele também funciona como uma ponte para conectar a interface Ethernet real e as virtuais.
+
+
+[Uso]
+
+Uso: eth-multiplexer [OPÇÃO ...]
+Servidor multiplexador Hurd.
+
+  -i, --interface = Interface de rede do DEVICE a ser usada
+  - ?, --help Dê esta lista de ajuda
+      --usage Fornece uma mensagem curta de uso
+  -V, --version Versão do programa de impressão
+
+Argumentos obrigatórios ou opcionais para opções longas também são obrigatórios ou opcionais
+para quaisquer opções curtas correspondentes.
+
+
+A opção '-i' especifica a interface de rede em que o tradutor está instalado. O eth-multiplexer só pode se conectar a uma interface de rede e a opção '-i' deve ser usada apenas uma vez. DEVICE é um arquivo de dispositivo criado pelo tradutor devnode.
+
+
+[Interno]
+
+O eth-multiplexer implementa as funções do lado do servidor em device.defs, para que outros programas possam acessar o dispositivo virtual como outros dispositivos. Todas as informações sobre a interface virtual são mantidas na estrutura vether_device.
+Quando o eth-multiplexer obtém um pacote de uma interface virtual (o que acontece em ds_device_write) ou da interface real (o que acontece em ethernet_demuxer), ele envia o pacote para todas as outras interfaces. O eth-multipexer possui filtros BPF para cada cliente. O filtro BPF decide se deve entregar o pacote. A entrega do pacote é feita por Deliver_pack (). Não há filtro para a interface de rede real no multiplexador eth, portanto, cada pacote da interface virtual será enviado para a interface real cujo filtro decidirá o destino do pacote.
+O eth-multiplexer configura a interface real no modo promíscuo, de forma que o eth-multiplexer possa receber o pacote com o endereço de hardware da interface virtual da interface real.
+
+-------------------------------------------------------------//////////------------------------------------------------------
+
 [Introduction]
 
 eth-multiplexer is a network multiplexer. It creates virtual ethernet interface and dispatches the packet to the right user program that opens its virtual interface. It also works as a bridge to connect the real ethernet interface and the virtual ones.
