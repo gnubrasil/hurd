@@ -23,6 +23,26 @@
    the session's root process is given, and the session will be considered
    defunct if this process goes away.  */
 
+/* Servidor de registro de login (utmp).
+   Copyright (C) 1995, 1999 Free Software Foundation, Inc.
+   Escrito por Miles Bader <miles@gnu.ai.mit.edu>
+   Este programa é um software livre; você pode redistribuí-lo e / ou
+   modifique-o sob os termos da GNU General Public License como
+   publicado pela Free Software Foundation; ou versão 2, ou (em
+   sua opção) qualquer versão posterior.
+   Este programa é distribuído na esperança de que seja útil, mas
+   SEM QUALQUER GARANTIA; sem mesmo a garantia implícita de
+   COMERCIABILIDADE ou ADEQUAÇÃO A UM DETERMINADO FIM. Veja o GNU
+   Licença Pública Geral para mais detalhes.
+   Você deve ter recebido uma cópia da Licença Pública Geral GNU
+   junto com este programa; se não, escreva para o Software Livre
+   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, EUA. */
+
+/* Este programa mantém um nó tradutor que representa um determinado
+   sessão de login e responde a perguntas sobre o status dessa sessão. O PID de
+   o processo raiz da sessão é dado, e a sessão será considerada
+   extinto se este processo for embora. */
+
 #include <hurd.h>
 #include <hurd/ports.h>
 #include <hurd/trivfs.h>
