@@ -41,6 +41,48 @@ scriptversion=2006-12-25.00
 # This script is compatible with the BSD install script, but was written
 # from scratch.
 
+#! / bin / sh
+# install - instala um programa, script ou arquivo de dados
+
+#scriptversion = 2006-12-25.00
+
+# Origina-se do X11R5 (mit / util / scripts / install.sh), que era
+# posteriormente lançado no X11R6 (xc / config / util / install.sh) com o
+# seguindo direitos autorais e licença.
+#
+# Copyright (C) 1994 X Consortium
+#
+# A permissão é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia
+# deste software e arquivos de documentação associados (o "Software"), para
+# negociar no Software sem restrição, incluindo, sem limitação, o
+# direitos de usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e / ou
+# vender cópias do Software e permitir que as pessoas a quem o Software seja
+# fornecido para fazê-lo, sujeito às seguintes condições:
+#
+# O aviso de direitos autorais acima e este aviso de permissão devem ser incluídos em
+# todas as cópias ou partes substanciais do Software.
+#
+# O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU
+# IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIABILIDADE,
+# ADEQUAÇÃO A UM DETERMINADO FIM E NÃO VIOLAÇÃO. EM NENHUMA HIPÓTESE O
+# X CONSORTIUM SERÁ RESPONSÁVEL POR QUALQUER RECLAMAÇÃO, DANOS OU OUTRA RESPONSABILIDADE, SEJA
+# UMA AÇÃO DE CONTRATO, DELITO OU DE OUTRA FORMA, DECORRENTE DE, FORA DE OU EM CONEXÃO-
+# TION COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
+#
+# Exceto conforme contido neste aviso, o nome do Consórcio X não deve
+# ser usado em publicidade ou de outra forma para promover a venda, uso ou outro negócio-
+#Número neste software sem autorização prévia por escrito da X Consor-
+# tium.
+#
+#
+# As alterações da FSF neste arquivo são de domínio público.
+#
+# Chamar este script install-sh é preferível a install.sh, para prevenir
+# `make 'regras implícitas de criação de um arquivo chamado install a partir dele
+# quando não há Makefile.
+#
+# Este script é compatível com o script de instalação BSD, mas foi escrito
+# do princípio
 nl='
 '
 IFS=" ""	$nl"
