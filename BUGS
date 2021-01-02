@@ -34,3 +34,41 @@ Patch for MiG dealing when sreplyport and mach_port_poly_t are used together.
 
 Install Linux and NetBSD physical CPU reset code in place of current
 Mach version.
+
+
+seu arquivo é para bugs no Mach. Bugs no Hurd vão para TODO.
+
+Nunca exclua um bug desta lista; novos lançamentos do Mach precisam ser
+verificado para garantir que os bugs corrigidos permaneçam corrigidos e, portanto, esta lista deve
+nunca fique truncado. -mib
+
+--Reportado, verificado corrigido -
+
+--Reportado, reivindicado corrigido -
+Os stubs do usuário MiG precisam destruir a porta de resposta em qualquer transmissão de mensagem
+erro, não apenas um conjunto limitado.
+
+--Reportado--
+Bug em vm_fault: quando vm_fault em uma página shadow:
+Primeira página de cópia anônima; retorna indisponível. Então falha em
+a página e o bloco reais. Este bloqueio pode ser interrompido, mas um bloqueio é
+sendo retido no objeto de cópia (porque é FIRST_M). Se o sono for
+interrompido, o bloqueio é liberado, mas, infelizmente, também pode
+ser suspenso, e isso é uma perda.
+
+a liberação de pager de páginas com fio pode bloquear para sempre de forma ininterrupta.
+
+a desconexão das páginas deve chamar PAGE_WAKEUP
+
+permissão arg de vm_wire não é passada para vm_fault, de modo que vm_fault
+conecta excessivamente a proteção de corrente, que pode ser mais do que o
+permissão arg de vm_wire.
+
+Ao conectar, vm_fault usa permissão atual em vez de max
+permissão; isso causará uma falha de vm_wire se o atual
+a permissão é promovida posteriormente.
+
+Patch para lidar com MiG quando sreplyport e mach_port_poly_t são usados ​​juntos.
+
+Instale o código de redefinição da CPU física do Linux e NetBSD no lugar do atual
+Versão Mach.
