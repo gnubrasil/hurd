@@ -16,6 +16,20 @@
 
    You should have received a copy of the GNU General Public License
    along with the GNU Hurd.  If not, see <http://www.gnu.org/licenses/>.  */
+/*
+    Copyright (C) 2014 Free Software Foundation, Inc.
+    Escrito por Justus Winter.
+    Este arquivo faz parte do GNU Hurd.
+    O GNU Hurd é um software livre; você pode redistribuí-lo e / ou
+    modifique-o sob os termos da GNU General Public License como
+    publicado pela Free Software Foundation; ou versão 2, ou (em
+    sua opção) qualquer versão posterior.
+    O GNU Hurd é distribuído na esperança de que seja útil, mas
+    SEM QUALQUER GARANTIA; sem mesmo a garantia implícita de
+    COMERCIABILIDADE ou ADEQUAÇÃO A UM DETERMINADO FIM. Veja o GNU
+    Licença Pública Geral para mais detalhes.
+    Você deve ter recebido uma cópia da Licença Pública Geral GNU
+    junto com o GNU Hurd. Caso contrário, consulte <http://www.gnu.org/licenses/>. */
 
 #ifndef __AUTH_MIG_DECLS_H__
 #define __AUTH_MIG_DECLS_H__
