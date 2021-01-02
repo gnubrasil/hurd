@@ -18,6 +18,22 @@
    along with this program; if not, write to the Free Software
    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA. */
 
+/* Servidor de autenticação.
+    Copyright (C) 1996,97,98,99,2002 Free Software Foundation, Inc.
+    Escrito por Roland McGrath.
+    Este arquivo faz parte do GNU Hurd.
+    O GNU Hurd é um software livre; você pode redistribuí-lo e / ou
+    modifique-o sob os termos da GNU General Public License como
+    publicado pela Free Software Foundation; ou versão 2, ou (em
+    sua opção) qualquer versão posterior.
+    O GNU Hurd é distribuído na esperança de que seja útil, mas
+    SEM QUALQUER GARANTIA; sem mesmo a garantia implícita de
+    COMERCIABILIDADE ou ADEQUAÇÃO A UM DETERMINADO FIM. Veja o GNU
+    Licença Pública Geral para mais detalhes.
+    Você deve ter recebido uma cópia da Licença Pública Geral GNU
+    junto com este programa; se não, escreva para o Software Livre
+    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, EUA. */
+
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
